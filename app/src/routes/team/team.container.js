@@ -1,14 +1,17 @@
 import {connect} from 'react-redux';
 
 import {Team} from './team.component';
-import {getTeam} from '../../modules/team';
+import {getTeam, getTeamList, getTeamPlayerList} from '../../modules/team';
 
 function mapStateToProps(store) {
   return {
-    team: store.getIn(['team', 'single'])
+    team: store.getIn(['team', 'single']),
+    players: store.getIn(['team', 'players'])
   };
 }
 
 export default connect(mapStateToProps, {
-  getTeam
+  getTeam,
+  getTeamList,
+  getTeamPlayerList
 })(Team);

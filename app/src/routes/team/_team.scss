@@ -1,1 +1,22 @@
 @import "components/fixtures/fixtures";
+
+.team {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 40px;
+}
+
+.team__positions {
+  list-style: none;
+  text-align: left;
+}
+
+.team__position {
+  padding: 10px;
+}
+
+.team__positions-header {
+  text-align: left;
+}
