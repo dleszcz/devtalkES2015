@@ -1,0 +1,27 @@
+.fixtures__header {
+  text-align: center;
+}
+
+.fixtures__game {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.fixtures__game--finished {
+  background: lighten(#00BCD4, 50%);
+}
+
+.fixtures__game--scheduled {
+  background: white;
+}
+
+.fixtures__game--timed {
+}
+
+.fixtures__game-result {
+  display: block;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 15px;
+}

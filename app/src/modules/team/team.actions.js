@@ -27,3 +27,15 @@ export function getTeam(id) {
     })
   };
 }
+
+export const TEAM_FIXTURES_REQUEST = 'TEAM_FIXTURES_REQUEST';
+export const TEAM_FIXTURES_SUCCESS = 'TEAM_FIXTURES_SUCCESS';
+export const TEAM_FIXTURES_FAILURE = 'TEAM_FIXTURES_FAILURE';
+
+export function getTeamFixtures(id) {
+  return {
+    [CALL_API]: teamResource.get(`${id}/fixtures`, {
+      types: [TEAM_FIXTURES_REQUEST, TEAM_FIXTURES_SUCCESS, TEAM_FIXTURES_FAILURE]
+    })
+  };
+}

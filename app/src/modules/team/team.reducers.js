@@ -1,10 +1,11 @@
 import {fromJS} from 'immutable';
 import createReducer from 'create-reducer';
-import {TEAM_LIST_SUCCESS, TEAM_SUCCESS} from './team.actions.js';
+import {TEAM_LIST_SUCCESS, TEAM_SUCCESS, TEAM_FIXTURES_SUCCESS} from './team.actions.js';
 
 const initialState = fromJS({
   list: [],
-  single: {}
+  single: {},
+  fixtures: {}
 });
 
 export const teamReducer = createReducer(initialState, {
@@ -15,5 +16,8 @@ export const teamReducer = createReducer(initialState, {
   },
   [TEAM_SUCCESS](state, {payload}) {
     return state.setIn(['single'], payload);
+  },
+  [TEAM_FIXTURES_SUCCESS](state, {payload}) {
+    return state.setIn(['fixtures'], payload);
   }
 });
